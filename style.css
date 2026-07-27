@@ -785,25 +785,30 @@ nav a.active::after{
     text-align:center;
 }
 .contact-info p{
-    margin:15px 0;
-    font-size:18px;
-    color:white
+    color: #ffffff;
+    font-size: 18px;
+    margin: 18px 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
 .contact-info i{
-    width:30px;
-    color:#0077ff;
-    margin-right:10px;
+    color: #38bdf8;
+    font-size: 24px;
+    width: 30px;
+    text-align: center;
 }
 
 .contact-info a{
-    text-decoration:none;
-    color:#222;
-    transition:.3s;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
 }
 
 .contact-info a:hover{
-    color:#0077ff;
+    color: #38bdf8;
 }
 
 .contact-form .btn{
