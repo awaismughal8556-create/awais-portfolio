@@ -787,6 +787,7 @@ nav a.active::after{
 .contact-info p{
     margin:15px 0;
     font-size:18px;
+    color:white
 }
 
 .contact-info i{
