@@ -92,21 +92,7 @@ counters.forEach(counter => {
 
 
 
-    .then(() => {
 
-        alert("Message Sent Successfully!");
-
-        form.reset();
-
-    })
-
-    .catch((error) => {
-
-        alert("Failed: " + error.text);
-
-    });
-
-});
 // EmailJS Initialize
 emailjs.init({
     publicKey: "-uiDSCvFKIZxWs6tO",
