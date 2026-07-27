@@ -784,3 +784,28 @@ nav a.active::after{
 
     text-align:center;
 }
+.contact-info p{
+    margin:15px 0;
+    font-size:18px;
+}
+
+.contact-info i{
+    width:30px;
+    color:#0077ff;
+    margin-right:10px;
+}
+
+.contact-info a{
+    text-decoration:none;
+    color:#222;
+    transition:.3s;
+}
+
+.contact-info a:hover{
+    color:#0077ff;
+}
+
+.contact-form .btn{
+    width:100%;
+    font-size:18px;
+}
