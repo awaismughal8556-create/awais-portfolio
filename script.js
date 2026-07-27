@@ -123,7 +123,7 @@ form.addEventListener("submit", function (e) {
 });
 // EmailJS Initialize
 emailjs.init({
-    publicKey: "-uIDSCvFKIZxWs6tO",
+    publicKey: "-uiDSCvFKIZxWs6tO",
 });
 
 const contactForm = document.getElementById("contactForm");
