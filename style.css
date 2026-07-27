@@ -402,8 +402,12 @@ nav a:hover::after{
 }
 
 .contact-info p{
-    margin-bottom:15px;
-    color:#cbd5e1;
+    color:#ffffff;
+    font-size:18px;
+    margin:18px 0;
+    display:flex;
+    align-items:center;
+    gap:15px;
 }
 
 .contact-info i{
@@ -812,6 +816,7 @@ nav a.active::after{
 }
 
 .contact-form .btn{
-    width:100%;
+    width:auto;
+    padding:15px 40px;
     font-size:18px;
 }
