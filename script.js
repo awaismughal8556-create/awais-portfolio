@@ -100,8 +100,13 @@ emailjs.init({
 
 const contactForm = document.getElementById("contactForm");
 
+const btn = document.querySelector("#contactForm button");
+
 contactForm.addEventListener("submit", function (e) {
     e.preventDefault();
+
+    btn.disabled = true;
+    btn.innerText = "Sending...";
 
     emailjs.send("service_9swmduz", "template_sw6sv1b", {
         name: document.getElementById("name").value,
@@ -111,9 +116,15 @@ contactForm.addEventListener("submit", function (e) {
     .then(function () {
         alert("✅ Message sent successfully!");
         contactForm.reset();
+
+        btn.disabled = false;
+        btn.innerText = "Send Message";
     })
     .catch(function (error) {
         alert("❌ Failed to send message.");
         console.error(error);
+
+        btn.disabled = false;
+        btn.innerText = "Send Message";
     });
 });
