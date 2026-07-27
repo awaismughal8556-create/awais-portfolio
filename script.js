@@ -90,21 +90,7 @@ counters.forEach(counter => {
 
 });
 
-emailjs.init({
-    publicKey: "YAHAN_APNI_PUBLIC_KEY_LIKHEN"
-});
 
-const form = document.getElementById("contactForm");
-
-form.addEventListener("submit", function (e) {
-
-    e.preventDefault();
-
-    emailjs.sendForm(
-        "service_9swmduz",
-        "template_9wc2due",
-        this
-    )
 
     .then(() => {
 
