@@ -131,7 +131,7 @@ const contactForm = document.getElementById("contactForm");
 contactForm.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    emailjs.send("service_9swmduz", "template_96bbo2t", {
+    emailjs.send("service_9swmduz", "template_sw6sv1b", {
         name: document.getElementById("name").value,
         email: document.getElementById("email").value,
         message: document.getElementById("message").value,
