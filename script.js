@@ -114,17 +114,22 @@ contactForm.addEventListener("submit", function (e) {
         message: document.getElementById("message").value,
     })
     .then(function () {
-        alert("✅ Message sent successfully!");
-        contactForm.reset();
+    btn.innerText = "✅ Message Sent";
+    contactForm.reset();
 
+    setTimeout(function () {
         btn.disabled = false;
         btn.innerText = "Send Message";
-    })
+    }, 2000);
+})
     .catch(function (error) {
-        alert("❌ Failed to send message.");
-        console.error(error);
+    console.error(error);
 
+    btn.innerText = "❌ Failed";
+
+    setTimeout(function () {
         btn.disabled = false;
         btn.innerText = "Send Message";
-    });
+    }, 2000);
+});
 });
