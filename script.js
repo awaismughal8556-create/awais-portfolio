@@ -89,14 +89,59 @@ counters.forEach(counter => {
     updateCounter();
 
 });
+
+emailjs.init({
+    publicKey: "YAHAN_APNI_PUBLIC_KEY_LIKHEN"
+});
+
 const form = document.getElementById("contactForm");
 
-form.addEventListener("submit", function(e){
+form.addEventListener("submit", function (e) {
 
     e.preventDefault();
 
-    alert("Thank You! Your message has been received.");
+    emailjs.sendForm(
+        "service_9swmduz",
+        "template_9wc2due",
+        this
+    )
 
-    form.reset();
+    .then(() => {
 
+        alert("Message Sent Successfully!");
+
+        form.reset();
+
+    })
+
+    .catch((error) => {
+
+        alert("Failed: " + error.text);
+
+    });
+
+});
+// EmailJS Initialize
+emailjs.init({
+    publicKey: "-uIDSCvFKIZxWs6tO",
+});
+
+const contactForm = document.getElementById("contactForm");
+
+contactForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    emailjs.send("service_9swmduz", "template_96bbo2t", {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        message: document.getElementById("message").value,
+    })
+    .then(function () {
+        alert("✅ Message sent successfully!");
+        contactForm.reset();
+    })
+    .catch(function (error) {
+        alert("❌ Failed to send message.");
+        console.error(error);
+    });
 });
