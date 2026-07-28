@@ -1,7 +1,6 @@
 /* =====================================================
    AWAIS MUGHAL PORTFOLIO
    Professional CSS
-   Part 1
 ====================================================== */
 
 /* Google Font */
@@ -414,38 +413,6 @@ nav a.active::after{
     transform:translateY(-6px);
 
 }
-/*====================================================
-            ABOUT SECTION
-====================================================*/
-<!-- About Section -->
-
-<section class="about" id="about">
-
-    <h2 class="section-title">About Me</h2>
-
-    <div class="about-container">
-
-        <div class="about-image" data-aos="zoom-in">
-            <img src="images/profile.png" alt="Profile">
-        </div>
-
-        <div class="about-content" data-aos="fade-left">
-
-            <h2>Front-End Web Developer</h2>
-
-            <p>
-                My name is <strong>Awais Mughal</strong>. I am learning Web Development and I love creating modern,
-                responsive and user-friendly websites using HTML, CSS and JavaScript. My goal is to become a
-                professional Full Stack Web Developer.
-            </p>
-
-            <a href="#" class="btn">Read More</a>
-
-        </div>
-
-    </div>
-
-</section>
 
 /*====================================================
                 SKILLS
