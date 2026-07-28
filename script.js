@@ -133,3 +133,14 @@ contactForm.addEventListener("submit", function (e) {
     }, 2000);
 });
 });
+// Splash Screen
+
+window.addEventListener("load", function () {
+
+    setTimeout(function () {
+
+        document.getElementById("splash").style.display = "none";
+
+    }, 3000);
+
+});
