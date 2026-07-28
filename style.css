@@ -176,15 +176,14 @@ nav a.active::after{
 /* Menu Button */
 
 .menu-btn{
-
-    display:none;
-
+    display:block;
     font-size:28px;
-
     color:#38bdf8;
-
     cursor:pointer;
 
+    position:absolute;
+    left:20px;
+    top:22px;
 }
 
 /* =======================
@@ -1137,11 +1136,7 @@ header{
 
 }
 
-.menu-btn{
 
-    display:block;
-
-}
 
  nav{
         position:fixed;
