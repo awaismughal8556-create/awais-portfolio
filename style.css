@@ -915,6 +915,25 @@ nav a.active::after{
     }
 
 }
+/* ABOUT MOBILE */
+
+.about-wrapper{
+    flex-direction:column;
+    text-align:center;
+}
+
+.about-image{
+    order:1;
+}
+
+.about-content{
+    order:2;
+}
+
+.about-image img{
+    width:260px;
+    height:260px;
+}
 /*====================================================
             FOOTER
 ====================================================*/
