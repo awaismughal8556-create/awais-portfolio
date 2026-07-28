@@ -803,6 +803,74 @@ nav a.active::after{
     width: 30px;
     text-align: center;
 }
+/* Splash Screen */
+
+#splash{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:#0f172a;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:99999;
+}
+
+.splash-content{
+    text-align:center;
+}
+
+.bismillah{
+    color:#38bdf8;
+    font-size:38px;
+    margin-bottom:30px;
+    animation:fadeDown 1.5s ease;
+}
+
+.splash-content img{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid #38bdf8;
+    box-shadow:0 0 30px #38bdf8;
+    animation:zoom 1.5s ease;
+}
+
+.splash-content h2{
+    color:white;
+    margin-top:20px;
+    font-size:38px;
+}
+
+.splash-content p{
+    color:#38bdf8;
+    font-size:22px;
+}
+
+@keyframes zoom{
+    from{
+        transform:scale(.3);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+@keyframes fadeDown{
+    from{
+        transform:translateY(-40px);
+        opacity:0;
+    }
+    to{
+        transform:translateY(0);
+        opacity:1;
+    }
+}
 
 .contact-info a{
     color: #ffffff;
