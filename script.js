@@ -29,9 +29,9 @@ topBtn.onclick = function () {
 const menuBtn = document.querySelector(".menu-btn");
 const nav = document.querySelector("nav");
 
-menuBtn.addEventListener("click", () => {
+menuBtn.onclick = () => {
     nav.classList.toggle("active");
-});
+};
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll("nav a");
 
