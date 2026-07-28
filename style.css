@@ -1143,28 +1143,28 @@ header{
 
 }
 
-nav{
-    position:fixed;
-    top:75px;
-    left:-100%;
-    width:100px;
-    height:calc(100vh - 75px);
+ nav{
+        position:fixed;
+        top:75px;
+        left:-220px;      /* پہلے باہر چھپا رہے گا */
+        width:220px;      /* اپنی مرضی کے مطابق 180px یا 200px بھی کر سکتے ہیں */
+        height:calc(100vh - 75px);
 
-    background:#111827;
+        background:#111827;
 
-    display:flex;
-    flex-direction:column;
-    align-items:center;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
 
-    gap:30px;
-    padding:40px 20px;
+        padding:30px 15px;
+        gap:25px;
 
-    transition:.4s;
-    z-index:9999;
-}
+        transition:0.4s;
+        z-index:999;
+    }
 
 nav.active{
-    right:0;
+    left:0;
 }
 
 .hero{
