@@ -74,41 +74,20 @@ a{
 ======================= */
 
 header{
-
-    position:fixed;
-
-    top:0;
-
-    left:0;
-
-    width:100%;
-
-    padding:20px 8%;
-
-    background:#111827;
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    z-index:1000;
-
-    box-shadow:0 5px 20px rgba(0,0,0,.3);
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
 }
 
-/* Logo */
-
 .logo{
+    font-size: 32px;
+    font-weight: 700;
+}
 
-    font-size:38px;
-
-    font-weight:700;
-
-    color:#38bdf8;
-
+.menu-icon{
+    font-size: 28px;
+    cursor: pointer;
 }
 
 /* Navigation */
