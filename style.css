@@ -1146,8 +1146,8 @@ header{
 nav{
     position:fixed;
     top:75px;
-    right:-100%;
-    width:250px;
+    left:-100%;
+    width:100px;
     height:calc(100vh - 75px);
 
     background:#111827;
