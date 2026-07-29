@@ -1,5 +1,10 @@
 console.log("Portfolio Website Started...");
 const topBtn = document.getElementById("topBtn");
+const menuBtn = document.querySelector(".menu-btn");
+const nav = document.querySelector("nav");
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav a");
+const topBtn = document.getElementById("topBtn");
 
 window.onscroll = function () {
 
@@ -29,12 +34,15 @@ topBtn.onclick = function () {
 const menuBtn = document.querySelector(".menu-btn");
 const nav = document.querySelector("nav");
 
-menuBtn.onclick = () => {
+menuBtn.addEventListener("click", () => {
     nav.classList.toggle("active");
-};
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll("nav a");
+});
 
+document.querySelectorAll("nav a").forEach(link => {
+    link.addEventListener("click", () => {
+        nav.classList.remove("active");
+    });
+});
 window.addEventListener("scroll", () => {
 
     let current = "";
