@@ -154,16 +154,14 @@ nav a.active::after{
 
 /* Menu Button */
 
-.menu-btn{
-    display:block;
-    font-size:28px;
-    color:#38bdf8;
-    cursor:pointer;
 
-    position:absolute;
-    left:20px;
-    top:22px;
+.menu-btn{
+    display: block;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 1001;
 }
+
 
 /* =======================
       Hero
@@ -1118,6 +1116,7 @@ header{
 
 .logo{
     font-size:34px;
+   margin-right: auto;
 }
 
 nav{
