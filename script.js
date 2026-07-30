@@ -481,19 +481,30 @@ filterButtons.forEach(button => {
 
 /* =====================================================
    CONTACT FORM
-   FIX: previously this just showed a fake "sent" alert and did
-   nothing else — the message never went anywhere. Since this is a
-   plain HTML/CSS/JS site with no backend, the way to actually
-   deliver the message without needing any external account is to
-   open the visitor's own email app, pre-filled and addressed to
-   you, so they just hit Send.
+   Sends the message directly to your inbox using EmailJS —
+   no email app opens on the visitor's computer, and no backend
+   server is needed.
 
-   IMPORTANT: replace the email below with your real address.
+   Fill in the 2 values below from your EmailJS dashboard:
+   - Service ID  -> "Email Services" tab
+   - Template ID -> "Email Templates" tab
+   Your template's variables should match the form field names:
+   {{name}}, {{email}}, {{subject}}, {{message}}
 ===================================================== */
 
-const CONTACT_EMAIL = "awaismughal8556@gmail.com"; // <-- apna asal email yahan likhein
+const EMAILJS_PUBLIC_KEY = "-uiDSCvFKIZxWs6tO";
+const EMAILJS_SERVICE_ID = "service_9swmduz";
+const EMAILJS_TEMPLATE_ID = "template_sw6sv1b";
+
+if (window.emailjs) {
+
+    emailjs.init(EMAILJS_PUBLIC_KEY);
+
+}
 
 const contactForm = document.getElementById("contactForm");
+const contactSubmitBtn = contactForm ? contactForm.querySelector("button[type='submit']") : null;
+const contactBtnDefaultText = contactSubmitBtn ? contactSubmitBtn.textContent.trim() : "";
 
 if (contactForm) {
 
@@ -501,27 +512,39 @@ if (contactForm) {
 
         e.preventDefault();
 
-        const fields = contactForm.querySelectorAll("input");
-        const name = fields[0].value;
-        const senderEmail = fields[1].value;
-        const subject = fields[2].value;
-        const message = contactForm.querySelector("textarea").value;
+        if (contactSubmitBtn) {
 
-        const body =
-            `Name: ${name}\n` +
-            `Email: ${senderEmail}\n\n` +
-            `${message}`;
+            contactSubmitBtn.textContent = "Sending...";
+            contactSubmitBtn.disabled = true;
 
-        const mailtoLink =
-            `mailto:${CONTACT_EMAIL}` +
-            `?subject=${encodeURIComponent(subject)}` +
-            `&body=${encodeURIComponent(body)}`;
+        }
 
-        window.location.href = mailtoLink;
+        emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, contactForm)
 
-        alert("✅ Aapka email app khul raha hai — wahan se \"Send\" dabayein taake message pohanch jaye.");
+            .then(() => {
 
-        contactForm.reset();
+                alert("✅ Aapka message bhej diya gaya hai. Shukriya!");
+
+                contactForm.reset();
+
+            })
+
+            .catch(() => {
+
+                alert("❌ Message send nahi ho saka. Dobara koshish karein.");
+
+            })
+
+            .finally(() => {
+
+                if (contactSubmitBtn) {
+
+                    contactSubmitBtn.textContent = contactBtnDefaultText;
+                    contactSubmitBtn.disabled = false;
+
+                }
+
+            });
 
     });
 
