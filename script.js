@@ -529,11 +529,10 @@ if (contactForm) {
 
             })
 
-            .catch(() => {
-
-                alert("❌ Message send nahi ho saka. Dobara koshish karein.");
-
-            })
+           .catch((error) => {
+          console.log(error);
+          alert(JSON.stringify(error));
+            });
 
             .finally(() => {
 
