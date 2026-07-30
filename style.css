@@ -1427,30 +1427,7 @@ ul{
                     PROJECTS SECTION
 ===================================================== */
 
-.project-filter{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:15px;
-    margin-bottom:60px;
-}
 
-.project-filter button{
-    padding:12px 28px;
-    background:var(--card);
-    border:1px solid var(--border);
-    color:var(--white);
-    border-radius:50px;
-    cursor:pointer;
-    transition:.4s;
-    font-weight:600;
-}
-
-.project-filter button:hover,
-.project-filter button.active{
-    background:var(--gold);
-    color:#000;
-}
 
 .projects-grid{
     display:grid;
