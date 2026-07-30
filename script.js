@@ -413,7 +413,7 @@ counters.forEach(counter => {
 ===================================================== */
 
 const revealItems = document.querySelectorAll(
-".section, .service-card, .skill-card, .project-card, .certificate-card, .testimonial-card, .timeline-item, .counter-box"
+".section, .service-card, .skill-card, .project-card, .certificate-card, .timeline-item, .counter-box"
 );
 
 const revealObserver = new IntersectionObserver((entries) => {
@@ -545,44 +545,6 @@ if (newsletter) {
     });
 
 }
-/* =====================================================
-   TESTIMONIAL AUTO SLIDER
-===================================================== */
-
-const slider = document.querySelector(".testimonial-slider");
-
-if (slider) {
-
-    let index = 0;
-
-    const cards = slider.children;
-
-    if (cards.length > 1) {
-
-        setInterval(() => {
-
-            index++;
-
-            if (index >= cards.length) {
-
-                index = 0;
-
-            }
-
-            slider.scrollTo({
-
-                left: cards[index].offsetLeft,
-
-                behavior: "smooth"
-
-            });
-
-        }, 4000);
-
-    }
-
-}
-
 
 /* =====================================================
    BUTTON RIPPLE EFFECT
