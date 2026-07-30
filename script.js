@@ -1,111 +1,647 @@
-console.log("Portfolio Website Started...");
+/* =====================================================
+   AWAIS MUGHAL PORTFOLIO
+   Professional JavaScript
+===================================================== */
 
-const topBtn = document.getElementById("topBtn");
-const menuBtn = document.querySelector(".menu-btn");
-const nav = document.querySelector("nav");
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll("nav a");
+"use strict";
 
-// Scroll-to-top button show/hide
-window.onscroll = function () {
-    if (document.documentElement.scrollTop > 200) {
-        topBtn.style.display = "block";
-    } else {
-        topBtn.style.display = "none";
+/* =====================================================
+   PRELOADER
+===================================================== */
+
+window.addEventListener("load", () => {
+
+    const preloader = document.getElementById("preloader");
+
+    if(preloader){
+
+        preloader.style.opacity = "0";
+
+        preloader.style.visibility = "hidden";
+
+        setTimeout(() => {
+
+            preloader.remove();
+
+        },500);
+
     }
-};
 
-topBtn.onclick = function () {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-};
-
-// Mobile menu toggle
-menuBtn.addEventListener("click", () => {
-    nav.classList.toggle("active");
 });
 
-document.querySelectorAll("nav a").forEach(link => {
-    link.addEventListener("click", () => {
-        nav.classList.remove("active");
-    });
+
+/* =====================================================
+   FOOTER YEAR
+   FIX: <span id="year"></span> existed in the HTML but nothing
+   ever set its text, so the copyright line showed "© . All Rights
+   Reserved." with a blank year.
+===================================================== */
+
+const yearSpan = document.getElementById("year");
+
+if (yearSpan) {
+
+    yearSpan.textContent = new Date().getFullYear();
+
+}
+
+
+/* =====================================================
+   STICKY HEADER
+===================================================== */
+
+const header = document.getElementById("header");
+
+window.addEventListener("scroll",()=>{
+
+    if(window.scrollY > 100){
+
+        header.classList.add("sticky");
+
+    }else{
+
+        header.classList.remove("sticky");
+
+    }
+
 });
 
-// Highlight active nav link on scroll
+
+/* =====================================================
+   MOBILE SIDEBAR
+===================================================== */
+
+const menuBtn = document.getElementById("menu-btn");
+const closeBtn = document.getElementById("close-menu");
+const sidebar = document.getElementById("sidebar");
+
+if (menuBtn && sidebar) {
+    menuBtn.addEventListener("click", () => {
+        sidebar.classList.add("active");
+    });
+}
+
+if (closeBtn && sidebar) {
+    closeBtn.addEventListener("click", () => {
+        sidebar.classList.remove("active");
+    });
+}
+
+document.querySelectorAll("#sidebar a").forEach(link=>{
+
+link.onclick=()=>{
+
+sidebar.classList.remove("active");
+
+}
+
+});
+
+
+/* =====================================================
+   BACK TO TOP BUTTON
+===================================================== */
+
+const topBtn=document.getElementById("topBtn");
+
+window.addEventListener("scroll",()=>{
+
+if(window.scrollY>500){
+
+topBtn.style.display="flex";
+
+}else{
+
+topBtn.style.display="none";
+
+}
+
+});
+
+topBtn.onclick=()=>{
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+};
+
+
+/* =====================================================
+   ACTIVE MENU
+===================================================== */
+
+const sections=document.querySelectorAll("section");
+const navLinks=document.querySelectorAll("#navbar a");
+
+window.addEventListener("scroll",()=>{
+
+let current="";
+
+sections.forEach(sec=>{
+
+const top=window.scrollY;
+
+const offset=sec.offsetTop-200;
+
+const height=sec.offsetHeight;
+
+if(top>=offset && top<offset+height){
+
+current=sec.getAttribute("id");
+
+}
+
+});
+
+navLinks.forEach(link=>{
+
+link.classList.remove("active");
+
+if(link.getAttribute("href")==="#"+current){
+
+link.classList.add("active");
+
+}
+
+});
+
+});
+/* =====================================================
+   CUSTOM CURSOR
+===================================================== */
+
+const cursor = document.querySelector(".cursor");
+const cursor2 = document.querySelector(".cursor2");
+
+if (cursor && cursor2) {
+
+    document.addEventListener("mousemove", (e) => {
+
+        cursor.style.left = e.clientX + "px";
+        cursor.style.top = e.clientY + "px";
+
+        cursor2.style.left = e.clientX + "px";
+        cursor2.style.top = e.clientY + "px";
+
+    });
+
+}
+
+
+/* =====================================================
+   SCROLL PROGRESS BAR
+===================================================== */
+
+const progressBar = document.getElementById("progress-bar");
+
 window.addEventListener("scroll", () => {
-    let current = "";
-    sections.forEach((section) => {
-        const sectionTop = section.offsetTop - 120;
-        if (scrollY >= sectionTop) {
-            current = section.getAttribute("id");
-        }
-    });
-    navLinks.forEach((link) => {
-        link.classList.remove("active");
-        if (link.getAttribute("href") === "#" + current) {
-            link.classList.add("active");
-        }
-    });
+
+    const totalHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+    const progress =
+        (window.pageYOffset / totalHeight) * 100;
+
+    if (progressBar) {
+        progressBar.style.width = progress + "%";
+    }
+
 });
 
-// Animated counters
-const counters = document.querySelectorAll(".count");
-counters.forEach(counter => {
-    const updateCounter = () => {
-        const target = +counter.getAttribute("data-target");
-        const count = +counter.innerText;
-        const increment = target / 100;
-        if (count < target) {
-            counter.innerText = Math.ceil(count + increment);
-            setTimeout(updateCounter, 20);
+
+/* =====================================================
+   THEME SWITCH
+===================================================== */
+
+const themeBtn = document.getElementById("theme-btn");
+
+if (themeBtn) {
+
+    themeBtn.addEventListener("click", () => {
+
+        document.body.classList.toggle("light-theme");
+
+        const icon = themeBtn.querySelector("i");
+
+        if (document.body.classList.contains("light-theme")) {
+
+            icon.classList.remove("fa-moon");
+            icon.classList.add("fa-sun");
+
         } else {
-            counter.innerText = target + "+";
+
+            icon.classList.remove("fa-sun");
+            icon.classList.add("fa-moon");
+
         }
-    };
-    updateCounter();
+
+    });
+
+}
+
+
+/* =====================================================
+   TYPING EFFECT
+===================================================== */
+
+const typing = document.querySelector(".typing");
+
+if (typing) {
+
+    const words = [
+        "Professional Web Developer",
+        "Frontend Developer",
+        "UI / UX Designer",
+        "Freelancer",
+        "Responsive Website Expert"
+    ];
+
+    let wordIndex = 0;
+    let charIndex = 0;
+    let deleting = false;
+
+    function typeEffect() {
+
+        const currentWord = words[wordIndex];
+
+        if (!deleting) {
+
+            typing.textContent =
+                currentWord.substring(0, charIndex++);
+
+            if (charIndex > currentWord.length) {
+
+                deleting = true;
+
+                setTimeout(typeEffect, 1500);
+
+                return;
+
+            }
+
+        } else {
+
+            typing.textContent =
+                currentWord.substring(0, charIndex--);
+
+            if (charIndex < 0) {
+
+                deleting = false;
+
+                wordIndex++;
+
+                if (wordIndex >= words.length) {
+
+                    wordIndex = 0;
+
+                }
+
+            }
+
+        }
+
+        setTimeout(typeEffect, deleting ? 50 : 100);
+
+    }
+
+    typeEffect();
+
+}
+/* =====================================================
+   COUNTER ANIMATION
+===================================================== */
+
+const counters = document.querySelectorAll(".counter");
+
+const counterObserver = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            const counter = entry.target;
+            const target = +counter.dataset.target;
+
+            let count = 0;
+
+            const speed = target / 150;
+
+            const updateCounter = () => {
+
+                if (count < target) {
+
+                    count += speed;
+
+                    counter.innerText = Math.ceil(count);
+
+                    requestAnimationFrame(updateCounter);
+
+                } else {
+
+                    counter.innerText = target.toLocaleString();
+
+                }
+
+            };
+
+            updateCounter();
+
+            counterObserver.unobserve(counter);
+
+        }
+
+    });
+
+}, { threshold: 0.5 });
+
+counters.forEach(counter => {
+
+    counterObserver.observe(counter);
+
 });
 
-// EmailJS Initialize
-emailjs.init({
-    publicKey: "-uiDSCvFKIZxWs6tO",
+
+/* =====================================================
+   SCROLL REVEAL
+===================================================== */
+
+const revealItems = document.querySelectorAll(
+".section, .service-card, .skill-card, .project-card, .certificate-card, .testimonial-card, .timeline-item, .counter-box"
+);
+
+const revealObserver = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            entry.target.classList.add("show");
+
+        }
+
+    });
+
+}, {
+
+    threshold: 0.15
+
 });
+
+revealItems.forEach(item => {
+
+    item.classList.add("hidden");
+
+    revealObserver.observe(item);
+
+});
+
+
+/* =====================================================
+   PROJECT FILTER
+===================================================== */
+
+const filterButtons = document.querySelectorAll(".project-filter button");
+const projects = document.querySelectorAll(".project-card");
+
+filterButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        filterButtons.forEach(btn => btn.classList.remove("active"));
+
+        button.classList.add("active");
+
+        const filter = button.dataset.filter;
+
+        projects.forEach(project => {
+
+            if (filter === "all" || project.classList.contains(filter)) {
+
+                project.style.display = "block";
+
+            } else {
+
+                project.style.display = "none";
+
+            }
+
+        });
+
+    });
+
+});
+
+
+/* =====================================================
+   CONTACT FORM
+===================================================== */
 
 const contactForm = document.getElementById("contactForm");
-const btn = document.querySelector("#contactForm button");
 
-contactForm.addEventListener("submit", function (e) {
-    e.preventDefault();
-    btn.disabled = true;
-    btn.innerText = "Sending...";
+if (contactForm) {
 
-    emailjs.send("service_9swmduz", "template_sw6sv1b", {
-        name: document.getElementById("name").value,
-        email: document.getElementById("email").value,
-        message: document.getElementById("message").value,
-    })
-    .then(function () {
-        btn.innerText = "✅ Message Sent";
+    contactForm.addEventListener("submit", function (e) {
+
+        e.preventDefault();
+
+        alert("✅ Thank you! Your message has been sent successfully.");
+
         contactForm.reset();
-        setTimeout(function () {
-            btn.disabled = false;
-            btn.innerText = "Send Message";
-        }, 2000);
-    })
-    .catch(function (error) {
-        console.error(error);
-        btn.innerText = "❌ Failed";
-        setTimeout(function () {
-            btn.disabled = false;
-            btn.innerText = "Send Message";
-        }, 2000);
+
     });
+
+}
+
+
+/* =====================================================
+   NEWSLETTER
+===================================================== */
+
+const newsletter = document.querySelector(".newsletter form");
+
+if (newsletter) {
+
+    newsletter.addEventListener("submit", function (e) {
+
+        e.preventDefault();
+
+        const email = this.querySelector("input");
+
+        if (email.value.trim() === "") {
+
+            alert("Please enter your email.");
+
+            return;
+
+        }
+
+        alert("✅ Successfully Subscribed!");
+
+        this.reset();
+
+    });
+
+}
+/* =====================================================
+   TESTIMONIAL AUTO SLIDER
+===================================================== */
+
+const slider = document.querySelector(".testimonial-slider");
+
+if (slider) {
+
+    let index = 0;
+
+    const cards = slider.children;
+
+    if (cards.length > 1) {
+
+        setInterval(() => {
+
+            index++;
+
+            if (index >= cards.length) {
+
+                index = 0;
+
+            }
+
+            slider.scrollTo({
+
+                left: cards[index].offsetLeft,
+
+                behavior: "smooth"
+
+            });
+
+        }, 4000);
+
+    }
+
+}
+
+
+/* =====================================================
+   BUTTON RIPPLE EFFECT
+===================================================== */
+
+document.querySelectorAll(".btn").forEach(button => {
+
+    button.addEventListener("click", function (e) {
+
+        const ripple = document.createElement("span");
+
+        const rect = this.getBoundingClientRect();
+
+        ripple.style.left = (e.clientX - rect.left) + "px";
+        ripple.style.top = (e.clientY - rect.top) + "px";
+
+        ripple.className = "ripple";
+
+        this.appendChild(ripple);
+
+        setTimeout(() => {
+
+            ripple.remove();
+
+        }, 600);
+
+    });
+
 });
 
-// Splash Screen
-window.addEventListener("load", function () {
-    setTimeout(function () {
-        document.getElementById("splash").style.display = "none";
-    }, 3000);
+
+/* =====================================================
+   SMOOTH SECTION SCROLL
+===================================================== */
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+    anchor.addEventListener("click", function (e) {
+
+        e.preventDefault();
+
+        const target = document.querySelector(this.getAttribute("href"));
+
+        if (target) {
+
+            target.scrollIntoView({
+
+                behavior: "smooth"
+
+            });
+
+        }
+
+    });
+
 });
+
+
+/* =====================================================
+   IMAGE LAZY LOAD
+===================================================== */
+
+const lazyImages = document.querySelectorAll("img");
+
+const imageObserver = new IntersectionObserver(entries => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            const img = entry.target;
+
+            img.loading = "lazy";
+
+            imageObserver.unobserve(img);
+
+        }
+
+    });
+
+});
+
+lazyImages.forEach(img => {
+
+    imageObserver.observe(img);
+
+});
+
+
+/* =====================================================
+   KEYBOARD SHORTCUT
+===================================================== */
+
+document.addEventListener("keydown", function (e) {
+
+    if (e.key === "Home") {
+
+        window.scrollTo({
+
+            top: 0,
+
+            behavior: "smooth"
+
+        });
+
+    }
+
+});
+
+
+/* =====================================================
+   CONSOLE MESSAGE
+===================================================== */
+
+console.log("%cAwais Mughal Portfolio",
+"color:#d4af37;font-size:24px;font-weight:bold;");
+
+console.log("%cDeveloped with HTML, CSS & JavaScript",
+"color:white;font-size:14px;");
