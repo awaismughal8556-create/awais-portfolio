@@ -3,480 +3,1498 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Awais Mughal | Portfolio</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <meta name="description" content="Awais Mughal Portfolio Website - Front-End Web Developer specializing in HTML, CSS, JavaScript and responsive web design.">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+<title>Awais Mughal | Professional Portfolio</title>
 
+<meta name="description"
+content="Professional Portfolio Website of Awais Mughal">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+<meta name="keywords"
+content="Portfolio, Web Developer, HTML, CSS, JavaScript">
+
+<meta name="author"
+content="Awais Mughal">
+
+<meta name="theme-color"
+content="#000000">
+
+<!-- ================= GOOGLE FONT ================= -->
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+rel="stylesheet">
+
+<!-- ================= FONT AWESOME ================= -->
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<!-- ================= CSS ================= -->
+
+<link rel="stylesheet"
+href="style.css">
+
 </head>
 
 <body>
-    <!-- Splash Screen -->
-<div id="splash">
 
-    <div class="splash-content">
+<!-- =========================================
+PRELOADER
+========================================= -->
 
-        <h1 class="bismillah">
-            بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
-        </h1>
+<div id="preloader">
 
-        <img src="Screenshot (171).png"
-     alt="Profile"
-     width="39"
-     height="39"
-     fetchpriority="high"
-     decoding="async">
-
-        <h2>Awais Mughal</h2>
-
-        <p>Front-End Web Developer</p>
-
-    </div>
+<div class="loader"></div>
 
 </div>
-   <header>
-    <div class="logo">Awais</div>
 
-    <div class="menu-btn">
-        <i class="fas fa-bars"></i>
-    </div>
+<!-- =========================================
+CUSTOM CURSOR
+========================================= -->
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#services">Services</a>
-        <a href="#experience">Experience</a>
-        <a href="#certificates">Certificates</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<div class="cursor"></div>
+
+<div class="cursor2"></div>
+
+<!-- =========================================
+SCROLL BAR
+========================================= -->
+
+<div id="progress-bar"></div>
+
+<!-- =========================================
+HEADER
+========================================= -->
+
+<header id="header">
+
+<div class="container">
+
+<div class="logo">
+
+<a href="#home">
+
+Awais <span>Mughal</span>
+
+</a>
+
+</div>
+
+<nav id="navbar">
+
+<ul>
+
+<li><a href="#home" class="active">Home</a></li>
+
+<li><a href="#about">About</a></li>
+
+<li><a href="#skills">Skills</a></li>
+
+<li><a href="#services">Services</a></li>
+
+<li><a href="#projects">Projects</a></li>
+
+<li><a href="#resume">Resume</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<div class="header-right">
+
+<button id="theme-btn">
+
+<i class="fa-solid fa-moon"></i>
+
+</button>
+
+<button id="menu-btn">
+
+<i class="fa-solid fa-bars"></i>
+
+</button>
+
+</div>
+
+</div>
+
 </header>
+
+<!-- =========================================
+SIDEBAR
+========================================= -->
+
+<div id="sidebar">
+
+<div class="sidebar-top">
+
+<h2>Awais Mughal</h2>
+
+<button id="close-menu">
+
+<i class="fa-solid fa-xmark"></i>
+
+</button>
+
+</div>
+
+<ul>
+
+<li><a href="#home">Home</a></li>
+
+<li><a href="#about">About</a></li>
+
+<li><a href="#skills">Skills</a></li>
+
+<li><a href="#services">Services</a></li>
+
+<li><a href="#projects">Projects</a></li>
+
+<li><a href="#resume">Resume</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</div>
+
+<!-- =========================================
+MAIN
+========================================= -->
+
+<main>
+
+<!-- =========================================
+HERO SECTION
+========================================= -->
+
 <section class="hero" id="home">
 
-    <div class="hero-text" data-aos="fade-right">
+<div class="container hero-container">
 
-        <h3>Hello, It's Me</h3>
+<div class="hero-content">
 
-        <h1>Awais Mughal</h1>
+<span class="hero-subtitle">
 
-        <h2>I'm a <span class="typing">Front-End Developer</span></h2>
+WELCOME TO MY PORTFOLIO
 
-        <p>
-            I build modern and responsive websites using HTML, CSS and JavaScript.
-        </p>
+</span>
 
-        <div class="buttons">
-            <a href="#" class="btn">Hire Me</a>
-            <a href="files/CV.pdf" class="btn2" download>Download CV</a>
-        </div>
-        <div class="social-icons">
+<h1>
 
-    <a href="#"><i class="fab fa-facebook-f"></i></a>
+Hi,
 
-    <a href="https://github.com/awaismughal8556-create" target="_blank"> <i class="fab fa-github"></i> </a>
+I'm
 
-    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+<span class="gold">
 
-    <a href="#"><i class="fab fa-instagram"></i></a>
+Awais Mughal
+
+</span>
+
+</h1>
+
+<h2>
+
+<span class="typing">
+
+Professional Web Developer
+
+</span>
+
+</h2>
+
+<p>
+
+I create premium websites with modern UI,
+responsive layouts,
+smooth animations,
+clean code
+and high performance.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="#contact"
+class="btn btn-gold">
+
+Hire Me
+
+</a>
+
+<a href="files/CV.pdf"
+download
+class="btn btn-dark">
+
+Download CV
+
+</a>
 
 </div>
 
+<div class="social-icons">
 
-    </div>
+<a href="#"><i class="fab fa-facebook-f"></i></a>
 
-    <div class="hero-image" data-aos="fade-left">
-        <img src="Screenshot (174).png" alt="Profile">
-    </div>
+<a href="#"><i class="fab fa-instagram"></i></a>
 
-</section>
-<!-- About Section -->
+<a href="#"><i class="fab fa-linkedin-in"></i></a>
 
-<section class="about" id="about">
+<a href="#"><i class="fab fa-github"></i></a>
 
-    <h2 class="section-title">About Me</h2>
-
-    <div class="about-wrapper">
-
-        <!-- Left Side -->
-        <div class="about-image">
-            <img src="images/profile.jpg" alt="Profile">
-        </div>
-
-        <!-- Right Side -->
-        <div class="about-content">
-            <h2>Front-End Web Developer</h2>
-
-            <p>
-                My name is Awais Mughal. I'm 15 years old and currently studying in Class 10, while learning front-end web development using HTML, CSS and JavaScript in my free time.
-            </p>
-
-            <a href="#" class="btn">Read More</a>
-        </div>
-
-    </div>
-
-</section>
-<!-- Skills Section -->
-
-<section class="skills" id="skills" data-aos="fade-up">
-
-    <h2 class="section-title">My Skills</h2>
-
-    <div class="skill">
-
-        <div class="skill-name">
-            <span>HTML</span>
-            <span>95%</span>
-        </div>
-
-        <div class="progress">
-            <div class="progress-bar html"></div>
-        </div>
-
-    </div>
-
-    <div class="skill">
-
-        <div class="skill-name">
-            <span>CSS</span>
-            <span>90%</span>
-        </div>
-
-        <div class="progress">
-            <div class="progress-bar css"></div>
-        </div>
-
-    </div>
-
-    <div class="skill">
-
-        <div class="skill-name">
-            <span>JavaScript</span>
-            <span>75%</span>
-        </div>
-
-        <div class="progress">
-            <div class="progress-bar js"></div>
-        </div>
-
-    </div>
-
-    <div class="skill">
-
-        <div class="skill-name">
-            <span>Git & GitHub</span>
-            <span>80%</span>
-        </div>
-
-        <div class="progress">
-            <div class="progress-bar git"></div>
-        </div>
-
-    </div>
-
-</section>
-<!-- Services Section -->
-
-<section class="services" id="services">
-
-    <h2 class="section-title">My Services</h2>
-
-    <div class="services-container">
-
-        <div class="service-box">
-            <i class="fas fa-code"></i>
-            <h3>Web Development</h3>
-            <p>I build modern and responsive websites using HTML, CSS and JavaScript.</p>
-        </div>
-
-        <div class="service-box">
-            <i class="fas fa-paint-brush"></i>
-            <h3>Web Design</h3>
-            <p>Beautiful and user-friendly website designs with modern UI.</p>
-        </div>
-
-        <div class="service-box">
-            <i class="fas fa-mobile-alt"></i>
-            <h3>Responsive Design</h3>
-            <p>Websites that work perfectly on Desktop, Tablet and Mobile.</p>
-        </div>
-
-    </div>
-
-</section>
-<!-- Experience Section -->
-
-<section class="experience" id="experience">
-
-    <h2 class="section-title">Education & Experience</h2>
-
-    <div class="timeline">
-
-        <div class="timeline-item">
-            <div class="timeline-content">
-                <h3>2026 - Present</h3>
-                <h4>Learning Web Development</h4>
-                <p>Learning HTML, CSS, JavaScript, Git & GitHub.</p>
-            </div>
-        </div>
-
-        <div class="timeline-item">
-            <div class="timeline-content">
-                <h3>2025</h3>
-                <h4>School Website</h4>
-                <p>Created my first responsive school website using HTML & CSS.</p>
-            </div>
-        </div>
-
-        <div class="timeline-item">
-            <div class="timeline-content">
-                <h3>Future Goal</h3>
-                <h4>Full Stack Developer</h4>
-                <p>Become a professional Full Stack Web Developer and Freelancer.</p>
-            </div>
-        </div>
-
-    </div>
-
-</section>
-<!-- Certificates Section -->
-
-<section class="certificates" id="certificates">
-
-    <h2 class="section-title">My Certificates</h2>
-
-    <div class="certificate-container">
-
-        <div class="certificate-card">
-            <i class="fas fa-award"></i>
-            <h3>HTML & CSS</h3>
-            <p>Completed Front-End Development course using HTML & CSS.</p>
-            <a href="#" class="btn">View Certificate</a>
-        </div>
-
-        <div class="certificate-card">
-            <i class="fas fa-medal"></i>
-            <h3>JavaScript</h3>
-            <p>Learning JavaScript for interactive web applications.</p>
-            <a href="#" class="btn">View Certificate</a>
-        </div>
-
-        <div class="certificate-card">
-            <i class="fas fa-laptop-code"></i>
-            <h3>Git & GitHub</h3>
-            <p>Learning Version Control and Project Management.</p>
-            <a href="#" class="btn">View Certificate</a>
-        </div>
-
-    </div>
-
-</section>
-<!-- Counter Section -->
-
-<section class="counter">
-
-    <div class="counter-box">
-        <h2 class="count" data-target="1">0</h2>
-        <p>Projects</p>
-    </div>
-
-    <div class="counter-box">
-        <h2 class="count" data-target="1">0</h2>
-        <p>Happy Clients</p>
-    </div>
-
-    <div class="counter-box">
-        <h2 class="count" data-target="1">0</h2>
-        <p>Years Learning</p>
-    </div>
-
-    <div class="counter-box">
-        <h2 class="count" data-target="100">0</h2>
-        <p>Dedication</p>
-    </div>
-
-</section>
-<!-- Projects Section -->
-
-<section class="projects" id="projects" data-aos="fade-up">
-
-    <h2 class="section-title">My Projects</h2>
-
-    <div class="project-container">
-
-    <!-- Project 1 -->
-    <div class="project-card">
-
-        <img src="Screenshot (169).png" alt="School Website">
-
-        <h3>School Website</h3>
-
-        <p>
-            A modern responsive school website built using HTML, CSS and JavaScript.
-        </p>
-
-        <div class="project-buttons">
-            <a href="#" class="btn">Live Demo</a>
-            <a href="https://github.com/awaismughal8556-create" target="_blank" class="btn2">GitHub</a>
-        </div>
-
-    </div>
-
-    <!-- Project 2 -->
-    <div class="project-card">
-
-        <img src="Screenshot (170).png" alt="Portfolio Website">
-
-        <h3>Portfolio Website</h3>
-
-        <p>
-            My personal portfolio website with responsive design, animations and contact form.
-        </p>
-
-        <div class="project-buttons">
-            <a href="#" class="btn">Live Demo</a>
-            <a href="https://github.com/awaismughal8556-create" target="_blank" class="btn2">GitHub</a>
-        </div>
-
-    </div>
-
-    <!-- Project 3 -->
-    <div class="project-card">
-
-        <img src="Screenshot (168).png" alt="Landing Page">
-
-        <h3>Business Landing Page</h3>
-
-        <p>
-            A clean and modern landing page created using HTML, CSS and JavaScript.
-        </p>
-
-        <div class="project-buttons">
-            <a href="#" class="btn">Live Demo</a>
-            <a href="https://github.com/awaismughal8556-create" target="_blank" class="btn2">GitHub</a>
-        </div>
-
-    </div>
+<a href="#"><i class="fab fa-youtube"></i></a>
 
 </div>
 
 </div>
-    </div>
+
+<div class="hero-image">
+
+<div class="image-box">
+
+<img src="images/profile.webp"
+alt="Awais Mughal">
+
+</div>
+
+</div>
+
+</div>
 
 </section>
-<!-- Contact Section -->
+<!-- =====================================================
+                    ABOUT SECTION
+===================================================== -->
 
-<section class="contact" id="contact" data-aos="zoom-in">
+<section class="about section" id="about">
 
-    <h2 class="section-title">Contact Me</h2>
+<div class="container">
 
-    <div class="contact-container">
+<div class="section-title">
 
-        <!-- Contact Information -->
-        <div class="contact-info">
+<span>ABOUT ME</span>
 
-            <h3>Let's Work Together</h3>
+<h2>Know Me Better</h2>
 
-            <p>If you have any project or work, feel free to contact me.</p>
+<p>
+I build modern, responsive and premium websites
+with clean code and excellent performance.
+</p>
 
-            <p>
-                <i class="fas fa-envelope"></i>
-                <a href="mailto:awaismughal8556@gmail.com">
-                    awaismughal8556@gmail.com
-                </a>
-            </p>
+</div>
 
-            <p>
-                <i class="fas fa-phone"></i>
-                <a href="tel:+923706785316">
-                    +92 370 6785316
-                </a>
-            </p>
+<div class="about-wrapper">
 
-            <p>
-                <i class="fab fa-whatsapp" style="color:#25D366;"></i>
-                <a href="https://wa.me/923058031673" target="_blank">
-                    Chat on WhatsApp
-                </a>
-            </p>
+<!-- LEFT -->
 
-            <p>
-                <i class="fas fa-location-dot"></i>
-                Lahore, Pakistan
-            </p>
+<div class="about-image">
 
-        </div>
+<div class="about-image-box">
 
-        <!-- Contact Form -->
-        <form class="contact-form" id="contactForm">
+<img src="images/about.webp" alt="About Me">
 
-            <input type="text" id="name" placeholder="Your Name" required>
+</div>
 
-            <input type="email" id="email" placeholder="Your Email" required>
+</div>
 
-            <textarea id="message" rows="6" placeholder="Your Message" required></textarea>
+<!-- RIGHT -->
 
-            <button type="submit" class="btn">
-                <i class="fas fa-paper-plane"></i> Send Message
-            </button>
+<div class="about-content">
 
-        </form>
+<h3>Professional Frontend Developer</h3>
 
-    </div>
+<p>
+
+Hello! I'm <strong>Awais Mughal</strong>.
+
+I specialize in creating modern portfolio,
+business and company websites with premium
+UI/UX, smooth animations and responsive layouts.
+
+</p>
+
+<div class="about-info">
+
+<div class="info-box">
+<h4>Name</h4>
+<p>Awais Mughal</p>
+</div>
+
+<div class="info-box">
+<h4>Email</h4>
+<p>your@email.com</p>
+</div>
+
+<div class="info-box">
+<h4>Phone</h4>
+<p>+92 XXX XXXXXXX</p>
+</div>
+
+<div class="info-box">
+<h4>Country</h4>
+<p>Pakistan</p>
+</div>
+
+<div class="info-box">
+<h4>Language</h4>
+<p>Urdu / English</p>
+</div>
+
+<div class="info-box">
+<h4>Freelance</h4>
+<p>Available</p>
+</div>
+
+</div>
+
+<div class="about-buttons">
+
+<a href="#contact" class="btn btn-gold">
+
+Hire Me
+
+</a>
+
+<a href="files/CV.pdf"
+download
+class="btn btn-dark">
+
+Download CV
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- EXPERIENCE -->
+
+<div class="experience-area">
+
+<div class="experience-box">
+
+<h2>5+</h2>
+
+<p>Years Experience</p>
+
+</div>
+
+<div class="experience-box">
+
+<h2>100+</h2>
+
+<p>Completed Projects</p>
+
+</div>
+
+<div class="experience-box">
+
+<h2>50+</h2>
+
+<p>Happy Clients</p>
+
+</div>
+
+<div class="experience-box">
+
+<h2>24/7</h2>
+
+<p>Support</p>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
-    
-    <!-- Footer -->
+
+<!-- =====================================================
+                    SKILLS
+===================================================== -->
+
+<section class="skills section" id="skills">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>MY SKILLS</span>
+
+<h2>Professional Skills</h2>
+
+<p>
+
+Technologies I use for building
+modern websites.
+
+</p>
+
+</div>
+
+<div class="skills-wrapper">
+
+<!-- LEFT -->
+
+<div class="skills-left">
+
+<div class="skill">
+
+<div class="skill-title">
+
+<h4>HTML5</h4>
+
+<span>95%</span>
+
+</div>
+
+<div class="progress">
+
+<div class="progress-bar html"></div>
+
+</div>
+
+</div>
+
+<div class="skill">
+
+<div class="skill-title">
+
+<h4>CSS3</h4>
+
+<span>92%</span>
+
+</div>
+
+<div class="progress">
+
+<div class="progress-bar css"></div>
+
+</div>
+
+</div>
+
+<div class="skill">
+
+<div class="skill-title">
+
+<h4>JavaScript</h4>
+
+<span>88%</span>
+
+</div>
+
+<div class="progress">
+
+<div class="progress-bar js"></div>
+
+</div>
+
+</div>
+
+<div class="skill">
+
+<div class="skill-title">
+
+<h4>Bootstrap</h4>
+
+<span>90%</span>
+
+</div>
+
+<div class="progress">
+
+<div class="progress-bar bootstrap"></div>
+
+</div>
+
+</div>
+
+<div class="skill">
+
+<div class="skill-title">
+
+<h4>Responsive Design</h4>
+
+<span>98%</span>
+
+</div>
+
+<div class="progress">
+
+<div class="progress-bar responsive"></div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- RIGHT -->
+
+<div class="skills-right">
+
+<div class="skill-card">
+
+<i class="fab fa-html5"></i>
+
+<h3>HTML5</h3>
+
+<p>Semantic HTML Structure</p>
+
+</div>
+
+<div class="skill-card">
+
+<i class="fab fa-css3-alt"></i>
+
+<h3>CSS3</h3>
+
+<p>Modern Layout & Animation</p>
+
+</div>
+
+<div class="skill-card">
+
+<i class="fab fa-js"></i>
+
+<h3>JavaScript</h3>
+
+<p>Interactive User Experience</p>
+
+</div>
+
+<div class="skill-card">
+
+<i class="fab fa-bootstrap"></i>
+
+<h3>Bootstrap</h3>
+
+<p>Responsive Framework</p>
+
+</div>
+
+<div class="skill-card">
+
+<i class="fab fa-github"></i>
+
+<h3>GitHub</h3>
+
+<p>Project Hosting</p>
+
+</div>
+
+<div class="skill-card">
+
+<i class="fas fa-mobile-screen-button"></i>
+
+<h3>Responsive</h3>
+
+<p>All Screen Sizes</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =====================================================
+                    SERVICES
+===================================================== -->
+
+<section class="services section" id="services">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>MY SERVICES</span>
+
+<h2>What I Can Do</h2>
+
+</div>
+
+<div class="services-grid">
+
+<div class="service-card">
+
+<i class="fas fa-code"></i>
+
+<h3>Web Development</h3>
+
+<p>
+Modern responsive websites
+using HTML CSS JavaScript.
+</p>
+
+</div>
+
+<div class="service-card">
+
+<i class="fas fa-laptop-code"></i>
+
+<h3>Frontend Development</h3>
+
+<p>
+Premium UI with smooth animations.
+</p>
+
+</div>
+
+<div class="service-card">
+
+<i class="fas fa-mobile-alt"></i>
+
+<h3>Responsive Design</h3>
+
+<p>
+Perfect on Mobile, Tablet and Desktop.
+</p>
+
+</div>
+
+<div class="service-card">
+
+<i class="fas fa-palette"></i>
+
+<h3>UI / UX Design</h3>
+
+<p>
+Modern and attractive user interface.
+</p>
+
+</div>
+
+<div class="service-card">
+
+<i class="fas fa-gauge-high"></i>
+
+<h3>Website Speed</h3>
+
+<p>
+Fast loading and optimized website.
+</p>
+
+</div>
+
+<div class="service-card">
+
+<i class="fas fa-headset"></i>
+
+<h3>Support</h3>
+
+<p>
+Technical support after project completion.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- ======================================================
+                    PROJECTS SECTION
+====================================================== -->
+
+<section class="projects section" id="projects">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>MY PORTFOLIO</span>
+
+<h2>Latest Projects</h2>
+
+<p>
+Some of my recent web development projects.
+</p>
+
+</div>
+
+<div class="project-filter">
+
+<button class="active" data-filter="all">All</button>
+<button data-filter="portfolio">Portfolio</button>
+<button data-filter="business">Business</button>
+<button data-filter="landing">Landing</button>
+<button data-filter="dashboard">Dashboard</button>
+
+</div>
+
+<div class="projects-grid">
+
+<!-- Project 1 -->
+
+<div class="project-card portfolio">
+
+<img src="images/project1.webp" alt="Portfolio">
+
+<div class="project-overlay">
+
+<span>Portfolio</span>
+
+<h3>Luxury Portfolio Website</h3>
+
+<div class="project-buttons">
+
+<a href="#" class="btn btn-gold">
+Live Demo
+</a>
+
+<a href="#" class="btn btn-dark">
+GitHub
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Project 2 -->
+
+<div class="project-card business">
+
+<img src="images/project2.webp" alt="Business">
+
+<div class="project-overlay">
+
+<span>Business</span>
+
+<h3>Corporate Website</h3>
+
+<div class="project-buttons">
+
+<a href="#" class="btn btn-gold">
+Live Demo
+</a>
+
+<a href="#" class="btn btn-dark">
+GitHub
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Project 3 -->
+
+<div class="project-card landing">
+
+<img src="images/project3.webp" alt="Landing">
+
+<div class="project-overlay">
+
+<span>Landing Page</span>
+
+<h3>Modern Landing Page</h3>
+
+<div class="project-buttons">
+
+<a href="#" class="btn btn-gold">
+Live Demo
+</a>
+
+<a href="#" class="btn btn-dark">
+GitHub
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Project 4 -->
+
+<div class="project-card dashboard">
+
+<img src="images/project4.webp" alt="Dashboard">
+
+<div class="project-overlay">
+
+<span>Dashboard</span>
+
+<h3>Admin Dashboard</h3>
+
+<div class="project-buttons">
+
+<a href="#" class="btn btn-gold">
+Live Demo
+</a>
+
+<a href="#" class="btn btn-dark">
+GitHub
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ======================================================
+                    RESUME SECTION
+====================================================== -->
+
+<section class="resume section" id="resume">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>RESUME</span>
+
+<h2>Experience & Education</h2>
+
+</div>
+
+<div class="resume-wrapper">
+
+<div class="resume-column">
+
+<h3 class="resume-heading">
+
+Experience
+
+</h3>
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<span class="timeline-date">
+
+2025 - Present
+
+</span>
+
+<h4>Frontend Developer</h4>
+
+<h5>Freelancer</h5>
+
+<p>
+Building responsive modern websites.
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<span class="timeline-date">
+
+2024 - 2025
+
+</span>
+
+<h4>Web Designer</h4>
+
+<h5>Personal Projects</h5>
+
+<p>
+
+Luxury UI / UX Design
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="resume-column">
+
+<h3 class="resume-heading">
+
+Education
+
+</h3>
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<span class="timeline-date">
+
+2026
+
+</span>
+
+<h4>Computer Science</h4>
+
+<h5>Matric</h5>
+
+<p>
+
+Learning Programming & Web Development.
+
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<span class="timeline-date">
+
+2025
+
+</span>
+
+<h4>HTML CSS JavaScript</h4>
+
+<h5>Online Course</h5>
+
+<p>
+
+Frontend Development.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ======================================================
+                    COUNTER
+====================================================== -->
+
+<section class="counter-section">
+
+<div class="container">
+
+<div class="counter-grid">
+
+<div class="counter-box">
+
+<i class="fa-solid fa-briefcase"></i>
+
+<h2 class="counter" data-target="120">
+
+0
+
+</h2>
+
+<h4>
+
+Projects
+
+</h4>
+
+</div>
+
+<div class="counter-box">
+
+<i class="fa-solid fa-users"></i>
+
+<h2 class="counter" data-target="75">
+
+0
+
+</h2>
+
+<h4>
+
+Clients
+
+</h4>
+
+</div>
+
+<div class="counter-box">
+
+<i class="fa-solid fa-award"></i>
+
+<h2 class="counter" data-target="18">
+
+0
+
+</h2>
+
+<h4>
+
+Certificates
+
+</h4>
+
+</div>
+
+<div class="counter-box">
+
+<i class="fa-solid fa-code"></i>
+
+<h2 class="counter" data-target="500000">
+
+0
+
+</h2>
+
+<h4>
+
+Lines Of Code
+
+</h4>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- ======================================================
+                    CERTIFICATES
+====================================================== -->
+
+<section class="certificates section" id="certificates">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>CERTIFICATES</span>
+
+<h2>My Certifications</h2>
+
+<p>Courses and achievements in Web Development.</p>
+
+</div>
+
+<div class="certificate-grid">
+
+<div class="certificate-card">
+
+<img src="images/certificate1.webp" alt="HTML Certificate">
+
+<div class="certificate-content">
+
+<h3>HTML & CSS</h3>
+
+<p>Professional Frontend Development</p>
+
+<a href="#">View Certificate</a>
+
+</div>
+
+</div>
+
+<div class="certificate-card">
+
+<img src="images/certificate2.webp" alt="JavaScript Certificate">
+
+<div class="certificate-content">
+
+<h3>JavaScript</h3>
+
+<p>Advanced JavaScript Programming</p>
+
+<a href="#">View Certificate</a>
+
+</div>
+
+</div>
+
+<div class="certificate-card">
+
+<img src="images/certificate3.webp" alt="Responsive Design">
+
+<div class="certificate-content">
+
+<h3>Responsive Design</h3>
+
+<p>Modern Responsive Websites</p>
+
+<a href="#">View Certificate</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ======================================================
+                    TESTIMONIALS
+====================================================== -->
+
+<section class="testimonials section" id="testimonials">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>TESTIMONIALS</span>
+
+<h2>What Clients Say</h2>
+
+</div>
+
+<div class="testimonial-slider">
+
+<div class="testimonial-card">
+
+<div class="client-image">
+<img src="images/client1.webp" alt="Client">
+</div>
+
+<div class="stars">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+</div>
+
+<p>
+Excellent work with modern design and fast delivery.
+</p>
+
+<h3>Ali Khan</h3>
+<span>Business Owner</span>
+
+</div>
+
+<div class="testimonial-card">
+
+<div class="client-image">
+<img src="images/client2.webp" alt="Client">
+</div>
+
+<div class="stars">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+</div>
+
+<p>
+Professional portfolio website with clean code.
+</p>
+
+<h3>Ahmed Raza</h3>
+<span>Freelancer</span>
+
+</div>
+
+<div class="testimonial-card">
+
+<div class="client-image">
+<img src="images/client3.webp" alt="Client">
+</div>
+
+<div class="stars">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+</div>
+
+<p>
+Highly recommended for responsive websites.
+</p>
+
+<h3>Usman Ali</h3>
+<span>CEO</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ======================================================
+                    CONTACT
+====================================================== -->
+
+<section class="contact section" id="contact">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>CONTACT</span>
+
+<h2>Let's Work Together</h2>
+
+</div>
+
+<div class="contact-wrapper">
+
+<div class="contact-info">
+
+<div class="contact-card">
+<i class="fas fa-location-dot"></i>
+<div>
+<h3>Location</h3>
+<p>Lahore, Pakistan</p>
+</div>
+</div>
+
+<div class="contact-card">
+<i class="fas fa-envelope"></i>
+<div>
+<h3>Email</h3>
+<p>your@email.com</p>
+</div>
+</div>
+
+<div class="contact-card">
+<i class="fas fa-phone"></i>
+<div>
+<h3>Phone</h3>
+<p>+92 XXX XXXXXXX</p>
+</div>
+</div>
+
+</div>
+
+<div class="contact-form">
+
+<form id="contactForm">
+
+<input type="text" placeholder="Your Name" required>
+
+<input type="email" placeholder="Your Email" required>
+
+<input type="text" placeholder="Subject" required>
+
+<textarea rows="7" placeholder="Write your message..." required></textarea>
+
+<button class="btn btn-gold" type="submit">
+
+Send Message
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ======================================================
+                    MAP
+====================================================== -->
+
+<section class="map">
+
+<iframe
+src="https://www.google.com/maps/embed?pb="
+loading="lazy">
+</iframe>
+
+</section>
+
+<!-- ======================================================
+                    NEWSLETTER
+====================================================== -->
+
+<section class="newsletter">
+
+<div class="container">
+
+<h2>Subscribe Newsletter</h2>
+
+<p>Get latest updates directly in your inbox.</p>
+
+<form>
+
+<input type="email" placeholder="Enter Your Email">
+
+<button type="submit">
+
+Subscribe
+
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+<!-- ======================================================
+                    FOOTER
+====================================================== -->
 
 <footer class="footer">
 
-    <h2>Awais Mughal</h2>
+<div class="container">
 
-    <p>Front-End Web Developer</p>
+<div class="footer-grid">
 
-    <div class="footer-icons">
+<div class="footer-box">
 
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
+<h2>Awais <span>Mughal</span></h2>
 
-        <a href="#"><i class="fab fa-github"></i></a>
+<p>
 
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+Professional Frontend Developer creating
+modern responsive websites.
 
-        <a href="#"><i class="fab fa-instagram"></i></a>
+</p>
 
-    </div>
+<div class="footer-social">
 
-    <p class="copyright">
-        © 2026 Awais Mughal. All Rights Reserved.
-    </p>
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+
+<a href="#"><i class="fab fa-instagram"></i></a>
+
+<a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+<a href="#"><i class="fab fa-github"></i></a>
+
+<a href="#"><i class="fab fa-youtube"></i></a>
+
+</div>
+
+</div>
+
+<div class="footer-box">
+
+<h3>Quick Links</h3>
+
+<ul>
+
+<li><a href="#home">Home</a></li>
+
+<li><a href="#about">About</a></li>
+
+<li><a href="#skills">Skills</a></li>
+
+<li><a href="#projects">Projects</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</div>
+
+<div class="footer-box">
+
+<h3>Services</h3>
+
+<ul>
+
+<li>Web Development</li>
+
+<li>UI / UX Design</li>
+
+<li>Responsive Design</li>
+
+<li>Website Optimization</li>
+
+</ul>
+
+</div>
+
+<div class="footer-box">
+
+<h3>Contact</h3>
+
+<p>Lahore, Pakistan</p>
+
+<p>your@email.com</p>
+
+<p>+92 XXX XXXXXXX</p>
+
+</div>
+
+</div>
+
+<hr>
+
+<div class="footer-bottom">
+
+<p>
+
+© <span id="year"></span> Awais Mughal. All Rights Reserved.
+
+</p>
+
+</div>
+
+</div>
 
 </footer>
 
-<!-- Scroll To Top Button -->
+<!-- ======================================================
+                FLOATING BUTTONS
+====================================================== -->
 
 <button id="topBtn">
-    <i class="fas fa-arrow-up"></i>
-</button>
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
-<script>
-AOS.init({
-    duration:1000,
-    once:true
-});
-</script>
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<i class="fas fa-arrow-up"></i>
+
+</button>
+
+<a href="https://wa.me/923001234567"
+class="whatsapp"
+target="_blank">
+
+<i class="fab fa-whatsapp"></i>
+
+</a>
+
+
+
+</main>
+
+<!-- =========================
+JAVASCRIPT
+========================= -->
+
 <script src="script.js"></script>
 </body>
 </html>
