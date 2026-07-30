@@ -493,8 +493,8 @@ filterButtons.forEach(button => {
 ===================================================== */
 
 const EMAILJS_PUBLIC_KEY = "-uiDSCvFKIZxWs6tO";
-const EMAILJS_SERVICE_ID = "9swmduz";
-const EMAILJS_TEMPLATE_ID = "sw6sv1b";
+const EMAILJS_SERVICE_ID = "service_9swmduz";
+const EMAILJS_TEMPLATE_ID = "template_sw6sv1b";
 
 if (window.emailjs) {
 
