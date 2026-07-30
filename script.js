@@ -6,6 +6,22 @@
 "use strict";
 
 /* =====================================================
+   ALWAYS OPEN ON THE HOME SECTION
+   FIX: browsers can restore the last scroll position on reload, or
+   jump straight to a section if the URL has a #hash. This forces
+   the page to always start at the very top (Home) first.
+===================================================== */
+
+if ("scrollRestoration" in history) {
+
+    history.scrollRestoration = "manual";
+
+}
+
+window.scrollTo(0, 0);
+
+
+/* =====================================================
    PRELOADER
 ===================================================== */
 
@@ -465,7 +481,17 @@ filterButtons.forEach(button => {
 
 /* =====================================================
    CONTACT FORM
+   FIX: previously this just showed a fake "sent" alert and did
+   nothing else — the message never went anywhere. Since this is a
+   plain HTML/CSS/JS site with no backend, the way to actually
+   deliver the message without needing any external account is to
+   open the visitor's own email app, pre-filled and addressed to
+   you, so they just hit Send.
+
+   IMPORTANT: replace the email below with your real address.
 ===================================================== */
+
+const CONTACT_EMAIL = "awaismughal8556@gmail.com"; // <-- apna asal email yahan likhein
 
 const contactForm = document.getElementById("contactForm");
 
@@ -475,7 +501,25 @@ if (contactForm) {
 
         e.preventDefault();
 
-        alert("✅ Thank you! Your message has been sent successfully.");
+        const fields = contactForm.querySelectorAll("input");
+        const name = fields[0].value;
+        const senderEmail = fields[1].value;
+        const subject = fields[2].value;
+        const message = contactForm.querySelector("textarea").value;
+
+        const body =
+            `Name: ${name}\n` +
+            `Email: ${senderEmail}\n\n` +
+            `${message}`;
+
+        const mailtoLink =
+            `mailto:${CONTACT_EMAIL}` +
+            `?subject=${encodeURIComponent(subject)}` +
+            `&body=${encodeURIComponent(body)}`;
+
+        window.location.href = mailtoLink;
+
+        alert("✅ Aapka email app khul raha hai — wahan se \"Send\" dabayein taake message pohanch jaye.");
 
         contactForm.reset();
 
