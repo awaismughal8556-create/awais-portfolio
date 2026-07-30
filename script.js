@@ -532,7 +532,7 @@ if (contactForm) {
            .catch((error) => {
           console.log(error);
           alert(JSON.stringify(error));
-            });
+            })
 
             .finally(() => {
 
