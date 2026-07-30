@@ -9,11 +9,26 @@
    PRELOADER
 ===================================================== */
 
-window.addEventListener("load", () => {
+/* =====================================================
+   PRELOADER
+   FIX/ENHANCEMENT: previously hid the moment the "load" event fired,
+   which on a light page can be near-instant — too fast to read the
+   Bismillah text. Now it waits for whichever is later: the page
+   finishing load, or a minimum 1.8s so it's always visible.
+===================================================== */
 
-    const preloader = document.getElementById("preloader");
+const preloader = document.getElementById("preloader");
+const MIN_PRELOADER_TIME = 2000;
+const preloaderStart = Date.now();
 
-    if(preloader){
+function hidePreloader() {
+
+    if (!preloader) return;
+
+    const elapsed = Date.now() - preloaderStart;
+    const remaining = Math.max(MIN_PRELOADER_TIME - elapsed, 0);
+
+    setTimeout(() => {
 
         preloader.style.opacity = "0";
 
@@ -23,11 +38,21 @@ window.addEventListener("load", () => {
 
             preloader.remove();
 
-        },500);
+        }, 500);
 
-    }
+    }, remaining);
 
-});
+}
+
+if (document.readyState === "complete") {
+
+    hidePreloader();
+
+} else {
+
+    window.addEventListener("load", hidePreloader);
+
+}
 
 
 /* =====================================================
